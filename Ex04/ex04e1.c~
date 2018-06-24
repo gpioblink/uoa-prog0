@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main(){
+  int y;
+  printf("西暦4桁を入力してください(例：2020) >");
+  scanf("%d", &y);
+
+  printf("十干は「");
+  switch(y%10){
+  case 1: printf("辛」\n");
+  case 2: printf("壬」\n");
+  case 3: printf("癸」\n");
+  case 4: printf("甲」\n");
+  case 5: printf("乙」\n");
+  case 6: printf("丙」\n");
+  case 7: printf("丁」\n");
+  case 8: printf("戊」\n");
+  case 9: printf("辛」\n");
+  case 0: printf("辛」\n");		       
+  }
+  
+  return 0;
+}
