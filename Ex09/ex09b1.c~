@@ -1,0 +1,42 @@
+#include<stdio.h>
+
+int main(){
+  int mat[5][5]={{1,1,1,1,1},{0,1,1,1,1},{0,0,1,1,1},{0,0,0,1,1},{0,0,0,0,1}};
+  int temp,dir;
+  
+  printf("反転する方向を指定してください (縦：０、横：１) \n");
+  scanf("%d",&dir);
+  switch(dir){
+  case 0:
+    for(int i=0; i<2; i++){
+      for(int j=0; j<5; j++){
+	temp = mat[i][j];
+	mat[i][j] = mat[i-2][j];
+	mat[i-2][j] = temp;
+      }
+    }
+    break;
+  case 1:
+    for(int i=0; i<2; i++){
+      for(int j=0; j<5; j++){
+	temp = mat[i][j];
+	mat[i][j] = mat[i-2][j];
+	mat[i-2][j] = temp;
+      }
+    }
+    break;
+  default:
+    printf("不適切な数値が入力されました\n");
+    break;
+  }
+  if(dir==0||dir==1){
+    for(int i=0; i<5; i++){
+      for(int j=0; j<2; j++){
+	temp = mat[i][j];
+	mat[i][j] = mat[i][j-2];
+	mat[i][j-2] = temp;
+      }
+    }
+  }
+  return 0;
+}

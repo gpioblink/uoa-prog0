@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main(){
+  int num[10], cnt=0;
+
+  for(int i=0; i<10; i++){
+    scanf("%d",&num[i]);
+    if(num[i] == -1) break;
+    cnt++;
+  }
+
+  for(int i=cnt-1; i>=0; i--){
+    printf(" %4d", num[i]);
+  }
+  printf("\n");
+  
+  return 0;
+}
